@@ -63,7 +63,7 @@ substitutions in text files:
 
    `hex_clock` --> `hacker_clock`  
    `HexClock` --> `HackerClock`  
-   `hexClock` --> `hackerClock`
+   `hexClock` --> `hackerClock`  
    `HEX_CLOCK` --> `HACKER_CLOCK`  
 
 Also, by default, the file `hex_clock.h` is renamed to `hacker_clock.h`, file
