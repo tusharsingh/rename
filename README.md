@@ -3,7 +3,7 @@ All hands to battle stations, rename at will!
 
 [![Build Status](https://travis-ci.org/dkrikun/rename.png)](https://travis-ci.org/dkrikun/rename)
 
-Rename a string in **CamelCase**, **snake_case** and **ALL_CAPS** in code and
+Rename a string in **CamelCase**, **lowerCamelCase**, **snake_case** and **ALL_CAPS** in code and
 filenames in one go.
 
 ### Example
@@ -18,6 +18,8 @@ Say you've got a cool `hex_clock.cpp`:
 class HexClock
 {
     int hex_clock();
+    
+    bool hexClock();
 
     private:
     int hex_clock_;
@@ -36,10 +38,11 @@ Meet the new shiny `hacker_clock.h`:
 #ifndef _HACKER_CLOCK_H
 #define _HACKER_CLOCK_H
 
-
 class HackerClock
 {
     int hacker_clock();
+    
+    bool hackerClock();
 
     private:
     int hacker_clock_;
@@ -51,7 +54,7 @@ class HackerClock
 ### What it knows to do
 
 **rename** is like a search/replace engine on steroids, it takes a string
-to search for, converts it to all possible cases (**CamelCase**, **snake_case**
+to search for, converts it to all possible cases (**CamelCase**, **lowerCamelCase**, **snake_case**
 and **ALL_CAPS**), and performs a search/replace with the corresponding case
 version of the destination string.
 
@@ -60,6 +63,7 @@ substitutions in text files:
 
    `hex_clock` --> `hacker_clock`  
    `HexClock` --> `HackerClock`  
+   `hexClock` --> `hackerClock`
    `HEX_CLOCK` --> `HACKER_CLOCK`  
 
 Also, by default, the file `hex_clock.h` is renamed to `hacker_clock.h`, file
